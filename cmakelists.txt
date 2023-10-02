@@ -1,0 +1,6 @@
+project(hw1)
+
+set(CMAKE_CXX_STANDARD 14)
+
+add_executable(hw1 Src/main.cpp Src/robot.cpp)
+
