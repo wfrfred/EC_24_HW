@@ -17,6 +17,4 @@ struct JudgingSystem {
     RobotHP* base_b;
 };
 
-int init(JudgingSystem* judgingSystem);
-
 int loop(JudgingSystem* judgingSystem);
