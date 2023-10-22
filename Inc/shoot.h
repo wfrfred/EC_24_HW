@@ -10,10 +10,8 @@
 #include <math.h>
 #include <robot.h>
 
-#include <chrono>
-
 struct TargetPoint {
-    std::chrono::time_point<std::chrono::high_resolution_clock> time;
+    int time;
     Robot* source;
     float target_x;
     float target_y;
