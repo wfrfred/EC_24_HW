@@ -19,6 +19,7 @@ int main() {
     judgingSystem.base_r->hp = 2000;
     judgingSystem.base_b = 0;
     judgingSystem.base_r = 0;
+    judgingSystem.table = createNode(NULL,NULL);
 
     for (int i = 0; i <= 4; ++i) {
         group_b[i].hp->max_hp = 200;

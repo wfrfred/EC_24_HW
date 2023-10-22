@@ -15,6 +15,8 @@ struct JudgingSystem {
 
     RobotHP* base_r;
     RobotHP* base_b;
+
+    Node* table;
 };
 
 int loop(JudgingSystem* judgingSystem);
