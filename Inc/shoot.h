@@ -22,6 +22,6 @@ struct TargetPoint {
 // @param shooter 射击者
 // @param targetPoint 用于返回的射击落点
 //
-void shoot(Robot* shooter, TargetPoint* targetPoint);
+void shoot(Robot* shooter, TargetPoint* targetPoint, JudgingSystem* judgingSystem);
 
 #endif
