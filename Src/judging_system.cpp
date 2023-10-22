@@ -6,14 +6,6 @@
 
 #include <iostream>
 
-int init(JudgingSystem* judgingSystem) {
-    judgingSystem->time = 0;
-    judgingSystem->money_b = 0;
-    judgingSystem->money_r = 0;
-    judgingSystem->buff_b = 0;
-    judgingSystem->buff_r = 0;
-}
-
 int loop(JudgingSystem* judgingSystem) {
     judgingSystem->time++;
     if (judgingSystem->base_b->hp == 0) {

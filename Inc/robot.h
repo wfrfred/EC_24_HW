@@ -43,7 +43,7 @@ struct ShootArgs {
 };
 
 struct Robot {
-    int uuid;
+    long uuid;
     RobotPos* pos;
     RobotHP* hp;
     ShootArgs* shoot_args;
