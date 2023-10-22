@@ -4,8 +4,15 @@
 
 #include "../Inc/robot.h"
 
-RobotPos* moveRobot(RobotPos *pos, float dx, float dy){
+RobotPos* moveRobot(RobotPos* pos, float dx, float dy) {
     pos->x = pos->x + dx;
     pos->y = pos->y + dy;
     return pos;
+}
+
+RobotHP* onHited(RobotHP* hp) {
+    hp->hp -= HIT;
+    if (hp->hp <= 0) {
+        hp == 0;
+    }
 }
