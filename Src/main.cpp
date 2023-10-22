@@ -13,12 +13,14 @@ int main() {
 
     JudgingSystem judgingSystem;
 
-    judgingSystem.base_b->max_hp = 2000;
-    judgingSystem.base_r->max_hp = 2000;
-    judgingSystem.base_b->hp = 2000;
-    judgingSystem.base_r->hp = 2000;
-    judgingSystem.base_b = 0;
-    judgingSystem.base_r = 0;
+    judgingSystem.base_b->hp->max_hp = 2000;
+    judgingSystem.base_r->hp->max_hp = 2000;
+    judgingSystem.base_b->hp->hp = 2000;
+    judgingSystem.base_r->hp->hp = 2000;
+    judgingSystem.base_b->pos->x = 5;
+    judgingSystem.base_b->pos->y = 0;
+    judgingSystem.base_r->pos->x = 5;
+    judgingSystem.base_r->pos->y = 10;
 
     for (int i = 0; i <= 4; ++i) {
         group_b[i].hp->max_hp = 200;

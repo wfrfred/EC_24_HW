@@ -13,10 +13,8 @@ struct JudgingSystem {
     Robot* group_r[4];
     Robot* group_b[4];
 
-    RobotHP* base_r;
-    RobotHP* base_b;
+    Robot* base_r;
+    Robot* base_b;
 };
-
-int init(JudgingSystem* judgingSystem);
 
 int loop(JudgingSystem* judgingSystem);
