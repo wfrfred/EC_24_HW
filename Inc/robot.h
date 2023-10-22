@@ -7,6 +7,9 @@
 
 #define HIT 1
 
+#include <shoot.h>
+#include <iostream>
+
 /* field
 --------
 |  R   |     // red base
@@ -32,7 +35,7 @@ struct RobotHP {
     int max_hp;
 };
 
-RobotHP* onHited(RobotHP* hp);
+void onHited(Robot* Robot, TargetPoint* targetPoint);
 
 struct ShootArgs {
     float muzzleVelocity;  // ms^{-1}
@@ -40,9 +43,9 @@ struct ShootArgs {
 
 struct Robot {
     int uuid;
-    RobotPos pos;
-    RobotHP hp;
-    ShootArgs shoot_args;
+    RobotPos* pos;
+    RobotHP* hp;
+    ShootArgs* shoot_args;
 };
 
 #endif  // HW1_ROBOT_H

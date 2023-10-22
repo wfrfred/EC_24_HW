@@ -10,9 +10,12 @@ RobotPos* moveRobot(RobotPos* pos, float dx, float dy) {
     return pos;
 }
 
-RobotHP* onHited(RobotHP* hp) {
-    hp->hp -= HIT;
-    if (hp->hp <= 0) {
-        hp == 0;
+void onHited(Robot* robot, TargetPoint* targetPoint, float buff) {
+    int* hp = &(robot->hp->hp);
+    *hp -= HIT * buff;
+    std::cout << targetPoint->source->uuid + "has hited" + robot->uuid << std::endl;
+    if (*hp <= 0) {
+        *hp == 0;
+        std::cout << targetPoint->source->uuid + "has killed" + robot->uuid << std::endl;
     }
 }
