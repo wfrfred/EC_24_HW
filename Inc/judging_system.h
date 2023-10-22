@@ -1,6 +1,10 @@
 //
 // Created by wfrfred on Oct.22 2023
 //
+
+#ifndef JUDGING_SYSTEM_H
+#define JUDGING_SYSTEM_H
+
 #include <robot.h>
 
 struct JudgingSystem {
@@ -20,3 +24,5 @@ struct JudgingSystem {
 };
 
 int loop(JudgingSystem* judgingSystem);
+
+#endif
