@@ -2,6 +2,9 @@
 // Created by wfrfred on Oct.22 2023
 //
 
+#ifndef JUDGING_SYSTEM_H
+#define JUDGING_SYSTEM_H
+
 #include "../Inc/judging_system.h"
 
 #include <iostream>
@@ -18,3 +21,5 @@ int loop(JudgingSystem* judgingSystem) {
         return 1;
     };
 }
+
+#endif
