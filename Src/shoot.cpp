@@ -39,7 +39,7 @@ Node* createNode(TargetPoint* element, Node* next) {
 
 void addNode(TargetPoint* element, Node* table) {
     Node* i = table;
-    while (i->element->time <= element->time && i->next != NULL) {
+    while (i->next->element->time <= element->time && i->next != NULL) {
         i = i->next;
     }
 
