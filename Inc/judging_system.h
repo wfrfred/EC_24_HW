@@ -1,0 +1,28 @@
+//
+// Created by wfrfred on Oct.22 2023
+//
+
+#ifndef JUDGING_SYSTEM_H
+#define JUDGING_SYSTEM_H
+
+#include <robot.h>
+
+struct JudgingSystem {
+    int time;
+    int money_r;
+    int money_b;
+    float buff_r;
+    float buff_b;
+
+    Robot* group_r[4];
+    Robot* group_b[4];
+
+    Robot* base_r;
+    Robot* base_b;
+
+    Node* table;
+};
+
+int loop(JudgingSystem* judgingSystem);
+
+#endif
