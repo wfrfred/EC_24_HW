@@ -22,6 +22,9 @@ int main() {
     judgingSystem.base_r->pos->x = 5;
     judgingSystem.base_r->pos->y = 10;
 
+    judgingSystem.base_r = 0;
+    judgingSystem.table = createNode(NULL, NULL);
+
     for (int i = 0; i <= 4; ++i) {
         group_b[i].hp->max_hp = 200;
         group_b[i].hp->hp = 200;

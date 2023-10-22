@@ -24,4 +24,14 @@ struct TargetPoint {
 //
 void shoot(Robot* shooter, TargetPoint* targetPoint, JudgingSystem* judgingSystem);
 
+struct Node {
+    TargetPoint* element;
+    struct Node* next;
+};
+
+Node* createNode(TargetPoint* element, Node* next);
+
+void addNode(TargetPoint* element, Node* table);
+
+Node* dropHead(Node* table);
 #endif

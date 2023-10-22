@@ -4,6 +4,8 @@
 
 #include "../Inc/shoot.h"
 
+#include <string.h>
+
 #include "../Inc/judging_system.h"
 
 #define g 9.8
@@ -21,4 +23,32 @@ void shoot(Robot* shooter, TargetPoint* targetPoint, JudgingSystem* judgingSyste
     float distance = v * cos(pitch) * (t / 1000);
     targetPoint->target_x = shooter->pos->x + distance * cos(yaw);
     targetPoint->target_y = shooter->pos->y + distance * sin(yaw);
+}
+
+Node* createNode(TargetPoint* element, Node* next) {
+    Node* node = NULL;
+    node = (Node*)malloc(sizeof(Node));
+    if (node == NULL) {
+        exit(EXIT_FAILURE);
+    }
+    memset(node, 0, sizeof(Node));
+    node->element = element;
+    node->next = NULL;
+    return node;
+}
+
+void addNode(TargetPoint* element, Node* table) {
+    Node* i = table;
+    while (i->element->time <= element->time && i->next != NULL) {
+        i = i->next;
+    }
+
+    Node* tmp = createNode(element, i->next);
+    i->next = tmp;
+}
+
+Node* dropHead(Node* table) {
+    Node* ret = table->next;
+    free(table);
+    return ret;
 }
