@@ -25,11 +25,6 @@ void shoot(Robot* shooter, TargetPoint* targetPoint, JudgingSystem* judgingSyste
     targetPoint->target_y = shooter->pos->y + distance * sin(yaw);
 }
 
-struct Node {
-    TargetPoint* element;
-    struct Node* next;
-};
-
 Node* createNode(TargetPoint* element, Node* next) {
     Node* node = NULL;
     node = (Node*)malloc(sizeof(Node));
